@@ -24,6 +24,7 @@ public class TestJUnit {
 	@Test
 	public void testAreaCuadrado() {		 
 		
+		//correcto
 		System.out.println("areaCuadrado:" + cuadrado.areaCuadrado());		
 		//comprobamos si dos valores son iguales		
 		cuadrado.areaCuadrado();
@@ -32,6 +33,8 @@ public class TestJUnit {
 	
 	@Test
 	public void testAreaRectangulo() {
+		
+		//error
 		System.out.println("areaRectangulo:" + rectangulo.areaRectangulo());		
 		//comprobamos que se cumple la condici�n  
 		assertTrue(rectangulo.areaRectangulo()==valor2); 		
@@ -39,6 +42,8 @@ public class TestJUnit {
 	
 	@Test
 	public void testAreaTriangulo() {
+		
+		//correcto
 		System.out.println("areaTriangulo:" + triangulo.areaTriangulo());		
 		 //comprobamos que NO se cumple la condici�n 
 		 assertFalse(triangulo.areaTriangulo()==valor1);		 
@@ -46,6 +51,8 @@ public class TestJUnit {
 	
 	@Test
 	 public void testAreaCirculo() {
+		
+		//correcto
 		 System.out.println("areaCirculo:" + String.format("%.2f",circulo.areaCirculo()));		
 		//comprobamos que el valor no es nulo 			
 		 assertNotNull(circulo.areaCirculo());		 
@@ -53,18 +60,23 @@ public class TestJUnit {
 	
 	@Test
 	 public void testAreaCuadrado2() {
+		//correcto
 		//comprobamos que el valor es nulo				
 		 assertNull(cuadrado.areaCuadrado());		 
 	 }
 		
 	@Test
 	public void testAreaRectangulo2() {		
+		
+		//error
 		//comprobamos si dos objetos est�n referenciados al mismo objeto
 		assertSame(cuadradoExpected, cuadrado);		
 	 }
 	
 	@Test
 	public void testAreaTriangulo2() {
+		
+		//correcto
 		//comprobamos si dos objetos NO est�n referenciados al mismo objeto		
 		assertNotSame(cuadrado,rectangulo);
 	 }
@@ -77,6 +89,7 @@ public class TestJUnit {
 		arrayObtenido[2]=triangulo.areaTriangulo();
 		arrayObtenido[3]=circulo.areaCirculo();	
 		
+		//error
 		//comprobamos si dos arrays con iguales
 		assertArrayEquals(arrayEsperado, arrayObtenido, 0);
 	 }
