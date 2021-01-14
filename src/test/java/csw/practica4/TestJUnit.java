@@ -24,7 +24,7 @@ public class TestJUnit {
 	@Test
 	public void testAreaCuadrado() {		 
 		
-		//correcto
+		//correcto 
 		System.out.println("areaCuadrado:" + cuadrado.areaCuadrado());		
 		//comprobamos si dos valores son iguales		
 		cuadrado.areaCuadrado();
