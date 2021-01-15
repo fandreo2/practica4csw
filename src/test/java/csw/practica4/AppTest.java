@@ -31,8 +31,11 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+    
+  //función donde se comprueba que el aserto es cierto
     public void testApp()
     {
+    	
         assertTrue( true );
     }
     
